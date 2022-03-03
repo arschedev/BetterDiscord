@@ -9,7 +9,7 @@
 ## How to Install
 1.    Install BetterDiscord 
 2.    Open Discord then go in settings -> BetterDiscord -> Themes -> Open Themes Folder
-3.    Paste [ThemeName].theme.css file (https://raw.githubusercontent.com/arschedev/BetterDiscord/main/Themes/[ThemeName]/css/[ThemeName].theme.css)
+3.    Paste MonokaiProRistretto.theme.css file (https://raw.githubusercontent.com/arschedev/BetterDiscord/main/Themes/MonokaiProRistretto/css/MonokaiProRistretto.theme.css)
 4.    Go back in settings -> BetterDiscord -> Themes
 5.    Enable the theme
 ---
