@@ -1,0 +1,540 @@
+/**
+ * @name Monokai-Pro-Ristretto
+ * @author @arschedev
+ * @authorLink https://github.com/arschedev
+ * @version 1.0.0
+ * @description Monokai Pro Theme with Ristretto Filter (JetBrains IDE Styled)
+ * @source https://github.com/arschedev/BetterDiscord/tree/master/Themes/MonokaiProRistretto
+*/
+
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
+html, body {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+
+                                /*! ---====ROOT====--- */
+
+:root, .theme-light, .theme-dark {
+    /*! Primary */
+    --background-primary:                                       #2C2525;
+    --background-secondary:                                     #211C1C;
+    --background-secondary-alt:                                 #2D2A2E;
+    --background-tertiary:                                      #2C2525;
+    --background-accent:                                        #3B514D;
+    --background-floating:                                      #2B2929;
+    --header-primary:                                           #FFF1F3;
+    --header-secondary:                                         #869198;
+    /*! Messages & Text */
+    --text-muted:                                               #FFF1F3;
+    --text-normal:                                              #F9CC6C;
+    --text-link:                                                #85DACC;
+    --text-positive:                                            #528A3A;
+    --background-message-hover:                                 #352E2E;
+    --background-mentioned:                                     #4B1515;
+    --background-mentioned-hover:                               #5B5353;
+    /*! Interface */
+    --channeltextarea-background:                               #363337;
+    --channels-default:                                         #FD6883;
+    --interactive-normal:                                       #FD6883;
+    --interactive-muted:                                        #869198;
+    --interactive-active:                                       #FD6883;
+    --interactive-hover:                                        #FD6883;
+    --background-modifier-accent:                               #F9CC6C;
+    --background-modifier-active:                               rgba(44, 37, 37,  1);
+    --background-modifier-hover:                                rgba(53, 46, 46,  1);
+    --background-modifier-selected:                             rgba(67, 62, 62, .7);
+    --brand-experiment-560:                                     #3B514D;
+    --brand-experiment-600:                                     #3B514D99;
+    --activity-card-background:                                 #211C1C;
+    --textbox-markdown-syntax:                                  #869198;
+    /*! ScrollBar */
+    --scrollbar-thin-thumb:                                     #403838;
+    --scrollbar-auto-thumb:                                     #403838;
+    --scrollbar-auto-scrollbar-color-thumb:                     #403838;
+    --scrollbar-auto-track:                                     #2C2525;
+    --scrollbar-auto-scrollbar-color-track:                     #2C2525;
+    /*! Global Buttons */
+    --brand-experiment-05a: #8988B90d;
+    --brand-experiment-10a: #8988B91a;
+    --brand-experiment-15a: #8988B926;
+    --brand-experiment-20a: #8988B933;
+    --brand-experiment-25a: #8988B940;
+    --brand-experiment-30a: #8988B94d;
+    --brand-experiment-35a: #8988B959;
+    --brand-experiment-40a: #8988B966;
+    --brand-experiment-45a: #8988B973;
+    --brand-experiment-50a: #8988B980;
+    --brand-experiment-55a: #8988B98c;
+    --brand-experiment-60a: #8988B999;
+    --brand-experiment-65a: #8988B9a6;
+    --brand-experiment-70a: #8988B9b3;
+    --brand-experiment-75a: #8988B9bf;
+    --brand-experiment-80a: #8988B9cc;
+    --brand-experiment-85a: #8988B9d9;
+    --brand-experiment-90a: #8988B9ff;
+    --brand-experiment-95a: #8988B98c;
+    --brand-experiment:     hsla(241, 25%, 62%, .75);
+}
+
+                                /*! --==VARIABLES===-- */
+
+:root, .theme-light, .theme-dark {
+    --transition-in: .228866s ease-in-out;
+    --transition-out: .3433s ease-in-out;
+    --transition-in-medium: calc(.228866s / 1.5) ease-in-out;
+    --transition-out-medium: calc(.3433s / 1.5) ease-in-out;
+    --transition-in-short: calc(.228866s / 2) ease-in-out;
+    --transition-out-short: calc(.3433s / 2) ease-in-out;
+    --transition-in-short-x: calc(.228866s / 3) ease-in-out;
+    --transition-out-short-x: calc(.3433s / 3) ease-in-out;
+    --transition-in-short-xx: calc(.228866s / 4) ease-in-out;
+    --transition-out-short-xx: calc(.3433s / 4) ease-in-out;
+}
+
+                                /*! ---====CSS=====--- */
+
+/*! Windows & Modals, e.g Change Log */
+.modal-3Hrb0S {
+    background-color: var(--background-secondary) !important;
+}
+
+/*! Spoilers */
+.theme-dark .spoilerText-27bIiA.hidden-3B-Rum, .theme-light .spoilerText-27bIiA.hidden-3B-Rum {
+    background-color:                                           #7D7374;
+    filter: brightness(100%);
+    transition: filter var(--transition-out-medium);
+}
+
+.theme-dark .spoilerText-27bIiA.hidden-3B-Rum:hover, .theme-light .spoilerText-27bIiA.hidden-3B-Rum:hover {
+    background-color:                                           #7D7374;
+    filter: brightness(80%);
+    transition: filter var(--transition-in);
+}
+
+.theme-dark .spoilerText-27bIiA, .theme-light .spoilerText-27bIiA {
+    background:                                                 rgba(168, 169, 235, .4);
+} 
+
+/*! Green Buttons */ 
+.lookFilled-yCfaCM.colorGreen-3y-Z79 {
+    background-color:                                           #528A3A;
+}
+
+.lookFilled-yCfaCM.colorGreen-3y-Z79:hover {
+    background-color:                                           var(--brand-experiment-560);
+}
+
+.lookFilled-yCfaCM.colorGreen-3y-Z79:active {
+    background-color:                                           var(--brand-experiment-600);
+}
+
+/*! Grey Buttons */
+.theme-dark .lookFilled-yCfaCM.colorGrey-2iAG-B, .theme-light .lookFilled-yCfaCM.colorGrey-2iAG-B {
+    background-color:                                           #778187;
+}
+
+
+/*! Global Buttons */
+.lookFilled-yCfaCM.colorBrand-I6CyqQ {
+    background-color:                                           #8988B9cc;
+}
+
+/*! User Info Stroke */
+.tabBarContainer-sCZC4w {
+    border-bottom: 0;
+}
+
+/*! Search Bar */
+.resultsGroup-cfY57t { 
+    background:                                                 #2B2929;
+}
+
+.option-ayUoaq {
+    border-radius: 3px 0 0 3px;
+}
+
+.theme-dark .option-ayUoaq::after, .theme-light .option-ayUoaq::after {
+    background:                                                 #2B2929;
+    background-color:                                           #2B2929;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-image: none;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+}
+
+.theme-dark .option-ayUoaq:hover::after, .theme-light .option-ayUoaq:hover::after {
+    background:                                                 linear-gradient(90deg, rgba(54,57,63,0), #2B2929 80%);
+}
+
+.theme-dark .option-ayUoaq:hover, .theme-light .option-ayUoaq:hover {
+    background:                                                 var(--brand-experiment-560);
+    background-color:                                           var(--brand-experiment-560);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-image: none;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+}
+
+/*! Friend List */
+.peopleColumn-1wMU14 {
+    background:                                                 #333030;
+}
+
+.peopleListItem-u6dGxF:hover {
+    background:                                                 var(--background-secondary);
+}
+
+/*! Left Navigation Bar */
+.scroller-3X7KbA.none-2-_0dP.scrollerBase-_bVAAt {
+    padding-bottom: 42px;
+    border: 1px solid transparent;
+    border-radius: 0px 360px 0px 360px;
+    margin-top: 22px;
+    margin-bottom: 55px;
+}
+
+/*! Messages' Beckgrounds & Onmouseover Events */
+/*Default*/
+.message-2CShn3.cozyMessage-1DWF9U.groupStart-3Mlgv1.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz:not(.mentioned-Tre-dv) {
+    background:                                                 var(--background-primary);
+    transition: background var(--transition-out-short-x);
+}
+.message-2CShn3.cozyMessage-1DWF9U.groupStart-3Mlgv1.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz:not(.mentioned-Tre-dv):hover {
+    background:                                                 var(--background-message-hover);
+    transition: background var(--transition-in-short-x);
+}
+.message-2CShn3.cozyMessage-1DWF9U.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz:not(.mentioned-Tre-dv) {
+    background:                                                 var(--background-primary);
+    transition: background var(--transition-out-short-x);                                                
+}
+.message-2CShn3.cozyMessage-1DWF9U.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz:not(.mentioned-Tre-dv):hover {
+    background:                                                 var(--background-message-hover);
+    transition: background var(--transition-in-short-x);
+}
+/*Mentioned*/
+.message-2CShn3.cozyMessage-1DWF9U.groupStart-3Mlgv1.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz.mentioned-Tre-dv {
+    background:                                                 var(--background-mentioned);
+    transition: background var(--transition-out-short-x);
+}
+.message-2CShn3.cozyMessage-1DWF9U.groupStart-3Mlgv1.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz.mentioned-Tre-dv:hover {
+    background:                                                 var(--background-mentioned-hover);
+    transition: background var(--transition-in-short-x);
+}
+.message-2CShn3.cozyMessage-1DWF9U.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz.mentioned-Tre-dv {
+    background:                                                 var(--background-mentioned);
+    transition: background var(--transition-out-short-x);
+}
+.message-2CShn3.cozyMessage-1DWF9U.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz.mentioned-Tre-dv:hover {
+    background:                                                 var(--background-mentioned-hover);
+    transition: background var(--transition-in-short-x);
+}
+
+/*! Buttons Strikethrough */
+.strikethrough-2Kl6HF {
+    color:                                                    /*#FD6883*/ var(--interative-normal);
+}
+
+/*! Interactive Buttons Stuff */
+.expression-picker-chat-input-button.buttonContainer-2lnNiN .contents-3ca1mk.button-2fCJ0o.button-3BaQ4X {
+    color:                                                      #FD6883;
+    transition: color var(--transition-out-short-x);
+}
+
+.expression-picker-chat-input-button.buttonContainer-2lnNiN:hover .contents-3ca1mk.button-2fCJ0o.button-3BaQ4X {
+    color:                                                      #FFF1F3;
+    transition: color var(--transition-in-short);
+}
+
+.active-z80xEj .buttonWrapper-3YFQGJ, .buttonWrapper-3YFQGJ:hover {
+    color:                                                      #FFF1F3;
+    transition: color var(--transition-in-short);
+}
+
+button.button-f2h6uQ.lookBlank-21BCro.colorBrand-I6CyqQ.grow-2sR_-F > div.contents-3ca1mk.button-2fCJ0o.button-3BaQ4X > div.buttonWrapper-3YFQGJ[id="children"] > svg[viewBox="0 0 24 24"]:hover {
+    color:                                                      #FD6883;
+}
+
+/*! RClick Menu */ 
+.item-1OdjEX.labelContainer-2vJzYL.colorDefault-CDqZdO:not(.colorDanger-3n-KnP) {
+    color:                                                      #FFF1F3;
+}
+
+
+/*! Nickname OnMouseOver */
+.applicationName-19i3lP.clickable-31pE3P:hover,
+.commandName-1KhvGm.clickable-31pE3P:hover, 
+.username-h_Y3Us.clickable-31pE3P:hover {
+    color:                                                      #C1C0C0;
+    text-decoration: none;
+}
+
+/*! Avatar OnMouseOver */
+.container-YkUktl, 
+.avatar-1EWyVD {
+    filter: opacity(1);
+    transition: filter var(--transition-out);
+}
+
+.avatar-1EWyVD:hover {
+    opacity: 1;
+    filter: opacity(.75);
+    transition: filter var(--transition-in);
+}
+
+/*! Icons: Add, Explore */
+.circleIconButton-1VxDrg.selected-2r1Hvo {
+    background-color:                                           #FFF1F3;
+    color:                                                      #FD6883;
+}
+.circleIconButton-1VxDrg {
+    color:                                                      #FD6883;
+}
+.size24-17l95E {
+    color:                                                      #5865F2;
+}
+.container-1Lk8p7 {
+    background-color:                                         /*#2C2525*/ var(--background-primary);
+}
+.theme-light .footer-31IekZ {
+    background-color:                                         /*#2C2525*/ var(--background-primary);
+}
+.footer-31IekZ > button.lookBlank-21BCro > div {
+    color:                                                      #ffffff;
+}
+
+button.footerButton-24QPis.button-f2h6uQ.lookFilled-yCfaCM.colorGrey-2iAG-B.sizeMedium-2bFIHr.grow-2sR_-F {
+    background-color:                                           #8988B9cc;
+}
+
+button.footerButton-24QPis.button-f2h6uQ.lookFilled-yCfaCM.colorGrey-2iAG-B.sizeMedium-2bFIHr.grow-2sR_-F:hover {
+    background-color:                                           var(--brand-experiment-560);
+}
+
+button.footerButton-24QPis.button-f2h6uQ.lookFilled-yCfaCM.colorGrey-2iAG-B.sizeMedium-2bFIHr.grow-2sR_-F:active {
+    background-color:                                           var(--brand-experiment-600);
+}
+
+/*! Timestamps */
+.timestamp-6-ptG3 {
+    color:                                                      #000000;
+}
+
+/*! Discord Logo */
+/* Static */
+.wrapper-3kah-n[role="listitem"] > div.childWrapper-1j_1ub {
+    color:                                                      #3C83E6;
+    background-color:                                           transparent;
+    transition: color var(--transition-out);
+}
+/* Hover */
+.wrapper-3kah-n[role="listitem"] > div.childWrapper-1j_1ub:hover {
+    color:                                                    /*#F9CC6C*/ var(--background-modifier-accent); 
+    background-color:                                           transparent;
+    transition: color var(--transition-in);
+}
+/* Selected */
+.wrapper-3kah-n.selected-1Drb7Z[role="listitem"] > div.childWrapper-1j_1ub {
+    color:                                                    /*#F9CC6C*/ var(--background-modifier-accent); 
+    background-color:                                           transparent;
+    transition: color var(--transition-in);
+}
+
+/*! Sidebar Icons */
+.wrapper-3kah-n.selected-1Drb7Z .childWrapper-1j_1ub, .wrapper-3kah-n:hover .childWrapper-1j_1ub {
+    color:                                                      #FFF1F3;
+    background-color:                                           #3B514D;
+}
+
+.childWrapper-1j_1ub.acronym-2zrAHN {
+    color:                                                      #FFF1F3;
+    background:                                                 #161616;
+}
+
+.childWrapper-1j_1ub.button-Jt-tIg {
+    font-size: 9px;
+    color:                                                      #FD6883;
+    background:                                                 transparent;
+    font-weight:                                                initial;
+}
+
+.childWrapper-1j_1ub.button-Jt-tIg:hover {
+    font-size: 8.9px;
+    color:                                                      #FD6883;
+    background:                                                 #FFF1F3;
+    font-weight:                                                bold;
+}
+
+/*! Discord Title */
+.wordmarkWindows-2dq6rw > svg {
+  width: 0;
+}
+.wordmarkWindows-2dq6rw::after {
+  content: '';
+  display: inline-block;
+  -webkit-mask-image: url('https://raw.githubusercontent.com/arschedev/BetterDiscord/main/Themes/MonokaiProRistretto/discord.svg');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  background-color:                                             #FFF1F3;
+  position: absolute;
+  margin-left: -5.5px;
+  width: 57px !important;
+  height: 14px !important;
+}
+
+/*! Info */
+.info-3pQQBb:last-child::after {
+  content: "\00000a\00000a======================\00000aTheme:\00000aMonokai Pro Ristretto\00000aVersion 1.0.0\00000aby @arschedev /\00000a / arschedev#3951 \00000aBottom Text\00000a======================\00000a";
+  text-transform: none;
+  white-space: pre; 
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: normal;
+  color:                                                        #000000;
+}
+
+.info-3pQQBb:last-child {
+    background-position: 0% 129%;
+    background-repeat: no-repeat;
+    background-image: url('/assets/ac4bcb496ca349a21b05e400bd8ac5dc.svg');
+}
+
+/* ! End ! */
+
+
+                                /*! --===SettingsModal===-- */
+
+/*  Much of the code below belongs to DevilBro (Mirco Wittrien, https://github.com/mwittrien) 
+    And was taken from the BetterDiscord theme "Settings Modal" (https://github.com/mwittrien/BetterDiscordAddons/tree/master/Themes/SettingsModal);
+    The code was reformatted and modified by @arschedev    */
+
+/* yo, DevilBro, your code is so good */
+
+:root {
+    --settingsModalBackground:                                  transparent;
+    --settingsModalWidth:                                       83vw;
+    --settingsModalHeight:                                      67vh;
+}
+
+#app-mount .baseLayer-W6S8cY {
+    opacity: 1 !important;
+    transform: unset !important;
+    will-change: unset !important;
+}
+
+#app-mount .stop-animations * {
+    transition-property: inherit !important;
+    animation: inherit !important;
+}
+
+#app-mount .layer-86YKbF.stop-animations:first-child::after {
+    content: "" !important;
+    position: fixed !important;
+    background:                                                 rgb(0, 0, 0) !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 0.85 !important;
+    z-index: 999 !important;
+    pointer-events: none !important;
+}
+
+#app-mount .layer-86YKbF ~ .layer-86YKbF {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    background: var(--settingsModalBackground) !important;
+    border-radius: 5px !important;
+    box-shadow: var(--elevation-high) !important;
+    width: var(--settingsModalWidth) !important;
+    height: var(--settingsModalHeight) !important;
+    margin: auto !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    contain: unset !important;
+    z-index: 1000 !important;
+}
+
+#app-mount .layer-86YKbF ~ .layer-86YKbF > div,
+#app-mount .layer-86YKbF ~ .layer-86YKbF .standardSidebarView-E9Pc3j {
+    position: static !important;
+    border-radius: unset !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: unset !important;
+    padding: unset !important;
+    overflow: hidden !important;
+}
+
+#app-mount .layer-86YKbF ~ .layer-86YKbF .sidebar-nqHbhN {
+    width: 218px !important;
+    padding: 20px 6px 20px 20px !important;
+}
+
+#app-mount .layer-86YKbF ~ .layer-86YKbF .contentColumnDefault-3eyv5o {
+    padding: 20px 40px !important;
+}
+
+#app-mount .layer-86YKbF ~ .layer-86YKbF .sidebar-3K3Z4C {
+    height: var(--settingsModalHeight) !important;
+}
+
+#app-mount .layer-86YKbF ~ .layer-86YKbF .repoHeader-2KfNvH {
+    max-width: calc(var(--settingsModalWidth) - 256px) !important;;
+}
+
+#app-mount .layer-86YKbF ~ .layer-86YKbF .standardSidebarView-E9Pc3j .editor {
+    height: calc(var(--settingsModalHeight) - 120px) !important;
+}
+
+#app-mount .layer-86YKbF ~ .layer-86YKbF .toolsContainer-25FL6V,
+#app-mount .layer-86YKbF ~ .layer-86YKbF .toolsContainer-25FL6V .tools-kIrEGr,
+#app-mount .layer-86YKbF ~ .layer-86YKbF .toolsContainer-25FL6V .container-O54IuJ,
+#app-mount .layer-86YKbF ~ .layer-86YKbF .toolsContainer-25FL6V .closeButton-PCZcma {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+    max-width: unset !important;
+    height: 100% !important;
+    max-height: unset !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 0 !important;
+    cursor: default !important;
+}
+
+#app-mount .layer-86YKbF ~ .layer-86YKbF .toolsContainer-25FL6V {
+    position: fixed !important;
+    top: 22px !important;
+    z-index: -1 !important;
+}
+
+#app-mount .layer-86YKbF ~ .layer-86YKbF .settingsToolbar-wu4yfQ {
+    display: none !important;
+}
+
+#app-mount .layer-86YKbF ~ .layer-86YKbF .header-2Kx1US {
+    max-width: calc(var(--settingsModalWidth) - 730px) !important;
+}
+
