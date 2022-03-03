@@ -2,11 +2,12 @@
  * @name Monokai-Pro-Ristretto
  * @author @arschedev
  * @authorLink https://github.com/arschedev
- * @version 1.0.0
+ * @version 1.0.2
  * @description Monokai Pro Theme with Ristretto Filter (JetBrains IDE Styled)
  * @source https://github.com/arschedev/BetterDiscord/tree/main/Themes/MonokaiProRistretto
 */
 
+/* Commit: MonokaiProRistretto-v1.0.2 */
 
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
@@ -31,10 +32,10 @@ html, body {
     --text-muted:                                               #FFF1F3;
     --text-normal:                                              #F9CC6C;
     --text-link:                                                #85DACC;
-    --text-positive:                                            #528A3A;
+    --text-positive:                                            hsla(102, 50%, 38%, 1);
     --background-message-hover:                                 #352E2E;
     --background-mentioned:                                     #4B1515;
-    --background-mentioned-hover:                               #5B5353;
+    --background-mentioned-hover:                               rgba(91, 83, 83, .5);
     /*! Interface */
     --channeltextarea-background:                               #363337;
     --channels-default:                                         #FD6883;
@@ -96,8 +97,46 @@ html, body {
 
                                 /*! ---====CSS=====--- */
 
+/*! No Icon */ 
+.noIcon-3gSX9V {
+    background-color:                                           #3B514D;
+    color:                                                      #FFF1F3;
+}
+
+/*! Drag & Drop Stuff */
+.target-1eRTCg.dragOver-1OKbo2::before {
+    background-color:                                           #8AC9FF;
+}
+.centerTarget-S6BLFQ.dragOver-1OKbo2::before {
+    background-color:                                           #8AC9FF;
+}
+.containerDragAfter-3aBiOW::after, .containerDragBefore-1s5Qg6::before, .containerDragAfter-1J_-1V::before, .containerDragBefore-ei4h1m::before {
+    background-color:                                           #8AC9FF;
+}
+
+/*! Icon Badge */ 
+.iconBadge-32fMme.participating-2Z81oO {
+    background-color:                                           transparent;
+}
+.icon-2Ug6UV {
+    color:                                                      #FD6883;
+}
+
+/*! Some Text in Voice Calls etc. */
+.flex-2S1XBF.flex-3BkGQD.horizontal-112GEH.horizontal-1Piu5-.flex-3BkGQD.directionRow-2Iu2A9.justifyStart-2Mwniq.alignCenter-14kD11.noWrap-hBpHBz {
+    font-weight: bold;
+}
+
+/*! Header Primary Color */
+.size24-17l95E {
+    color:                                                      #3C83E6;
+}
+
 /*! Windows & Modals, e.g Change Log */
 .modal-3Hrb0S {
+    background-color: var(--background-secondary) !important;
+}
+.fullscreenOnMobile-ixj0e3 {
     background-color: var(--background-secondary) !important;
 }
 
@@ -107,39 +146,58 @@ html, body {
     filter: brightness(100%);
     transition: filter var(--transition-out-medium);
 }
-
 .theme-dark .spoilerText-27bIiA.hidden-3B-Rum:hover, .theme-light .spoilerText-27bIiA.hidden-3B-Rum:hover {
     background-color:                                           #7D7374;
     filter: brightness(80%);
     transition: filter var(--transition-in);
 }
-
 .theme-dark .spoilerText-27bIiA, .theme-light .spoilerText-27bIiA {
     background:                                                 rgba(168, 169, 235, .4);
+    filter: brightness(120%);
 } 
 
 /*! Green Buttons */ 
 .lookFilled-yCfaCM.colorGreen-3y-Z79 {
-    background-color:                                           #528A3A;
+    background-color:                                           hsla(102, 40%, 38%, 1);
 }
-
 .lookFilled-yCfaCM.colorGreen-3y-Z79:hover {
-    background-color:                                           var(--brand-experiment-560);
+    background-color:                                           hsla(102, 40%, 38%, .75);
 }
-
 .lookFilled-yCfaCM.colorGreen-3y-Z79:active {
-    background-color:                                           var(--brand-experiment-600);
+    background-color:                                           hsla(102, 40%, 38%, .5);
 }
 
 /*! Grey Buttons */
 .theme-dark .lookFilled-yCfaCM.colorGrey-2iAG-B, .theme-light .lookFilled-yCfaCM.colorGrey-2iAG-B {
-    background-color:                                           #778187;
+    background-color:                                           rgba(119, 129, 135, 1);
+}
+.theme-dark .lookFilled-yCfaCM.colorGrey-2iAG-B:hover, .theme-light .lookFilled-yCfaCM.colorGrey-2iAG-B:hover {
+    background-color:                                           rgba(119, 129, 135, .75);
+}
+.theme-dark .lookFilled-yCfaCM.colorGrey-2iAG-B:active, .theme-light .lookFilled-yCfaCM.colorGrey-2iAG-B:active {
+    background-color:                                           rgba(119, 129, 135, .5);
 }
 
+/*! Primary Buttons */ 
+.theme-dark .lookFilled-yCfaCM.colorPrimary-2AuQVo, .theme-light .lookFilled-yCfaCM.colorPrimary-2AuQVo {
+    background-color:                                           rgba(119, 129, 135, 1);
+}
+.theme-dark .lookFilled-yCfaCM.colorPrimary-2AuQVo:hover, .theme-light .lookFilled-yCfaCM.colorPrimary-2AuQVo:hover {
+    background-color:                                           rgba(119, 129, 135, .75);
+}
+.theme-dark .lookFilled-yCfaCM.colorPrimary-2AuQVo:active, .theme-light .lookFilled-yCfaCM.colorPrimary-2AuQVo:active {
+    background-color:                                           rgba(119, 129, 135, .5);
+}
 
-/*! Global Buttons */
+/*! Blue Buttons */
 .lookFilled-yCfaCM.colorBrand-I6CyqQ {
-    background-color:                                           #8988B9cc;
+    background-color:                                           rgba(137, 136, 185, .4);
+}
+.lookFilled-yCfaCM.colorBrand-I6CyqQ:hover {
+    background-color:                                           rgba(137, 136, 185, .3);
+}
+.lookFilled-yCfaCM.colorBrand-I6CyqQ:active {
+    background-color:                                           rgba(137, 136, 185, .2);
 }
 
 /*! User Info Stroke */
@@ -151,7 +209,6 @@ html, body {
 .resultsGroup-cfY57t { 
     background:                                                 #2B2929;
 }
-
 .option-ayUoaq {
     border-radius: 3px 0 0 3px;
 }
@@ -168,11 +225,9 @@ html, body {
     background-origin: padding-box;
     background-clip: border-box;
 }
-
 .theme-dark .option-ayUoaq:hover::after, .theme-light .option-ayUoaq:hover::after {
     background:                                                 linear-gradient(90deg, rgba(54,57,63,0), #2B2929 80%);
 }
-
 .theme-dark .option-ayUoaq:hover, .theme-light .option-ayUoaq:hover {
     background:                                                 var(--brand-experiment-560);
     background-color:                                           var(--brand-experiment-560);
@@ -190,7 +245,6 @@ html, body {
 .peopleColumn-1wMU14 {
     background:                                                 #333030;
 }
-
 .peopleListItem-u6dGxF:hover {
     background:                                                 var(--background-secondary);
 }
@@ -250,17 +304,14 @@ html, body {
     color:                                                      #FD6883;
     transition: color var(--transition-out-short-x);
 }
-
 .expression-picker-chat-input-button.buttonContainer-2lnNiN:hover .contents-3ca1mk.button-2fCJ0o.button-3BaQ4X {
     color:                                                      #FFF1F3;
     transition: color var(--transition-in-short);
 }
-
 .active-z80xEj .buttonWrapper-3YFQGJ, .buttonWrapper-3YFQGJ:hover {
     color:                                                      #FFF1F3;
     transition: color var(--transition-in-short);
 }
-
 button.button-f2h6uQ.lookBlank-21BCro.colorBrand-I6CyqQ.grow-2sR_-F > div.contents-3ca1mk.button-2fCJ0o.button-3BaQ4X > div.buttonWrapper-3YFQGJ[id="children"] > svg[viewBox="0 0 24 24"]:hover {
     color:                                                      #FD6883;
 }
@@ -269,7 +320,6 @@ button.button-f2h6uQ.lookBlank-21BCro.colorBrand-I6CyqQ.grow-2sR_-F > div.conten
 .item-1OdjEX.labelContainer-2vJzYL.colorDefault-CDqZdO:not(.colorDanger-3n-KnP) {
     color:                                                      #FFF1F3;
 }
-
 
 /*! Nickname OnMouseOver */
 .applicationName-19i3lP.clickable-31pE3P:hover,
@@ -285,7 +335,6 @@ button.button-f2h6uQ.lookBlank-21BCro.colorBrand-I6CyqQ.grow-2sR_-F > div.conten
     filter: opacity(1);
     transition: filter var(--transition-out);
 }
-
 .avatar-1EWyVD:hover {
     opacity: 1;
     filter: opacity(.75);
@@ -300,9 +349,6 @@ button.button-f2h6uQ.lookBlank-21BCro.colorBrand-I6CyqQ.grow-2sR_-F > div.conten
 .circleIconButton-1VxDrg {
     color:                                                      #FD6883;
 }
-.size24-17l95E {
-    color:                                                      #5865F2;
-}
 .container-1Lk8p7 {
     background-color:                                         /*#2C2525*/ var(--background-primary);
 }
@@ -312,7 +358,6 @@ button.button-f2h6uQ.lookBlank-21BCro.colorBrand-I6CyqQ.grow-2sR_-F > div.conten
 .footer-31IekZ > button.lookBlank-21BCro > div {
     color:                                                      #ffffff;
 }
-
 button.footerButton-24QPis.button-f2h6uQ.lookFilled-yCfaCM.colorGrey-2iAG-B.sizeMedium-2bFIHr.grow-2sR_-F {
     background-color:                                           #8988B9cc;
 }
@@ -330,7 +375,7 @@ button.footerButton-24QPis.button-f2h6uQ.lookFilled-yCfaCM.colorGrey-2iAG-B.size
     color:                                                      #000000;
 }
 
-/*! Discord Logo */
+/*! Home Button (Discord Logo) */
 /* Static */
 .wrapper-3kah-n[role="listitem"] > div.childWrapper-1j_1ub {
     color:                                                      #3C83E6;
@@ -355,26 +400,22 @@ button.footerButton-24QPis.button-f2h6uQ.lookFilled-yCfaCM.colorGrey-2iAG-B.size
     color:                                                      #FFF1F3;
     background-color:                                           #3B514D;
 }
-
 .childWrapper-1j_1ub.acronym-2zrAHN {
     color:                                                      #FFF1F3;
     background:                                                 #161616;
 }
-
 .childWrapper-1j_1ub.button-Jt-tIg {
     font-size: 9px;
     color:                                                      #FD6883;
     background:                                                 transparent;
     font-weight:                                                initial;
 }
-
 .childWrapper-1j_1ub.button-Jt-tIg:hover {
     font-size: 8.9px;
     color:                                                      #FD6883;
     background:                                                 #FFF1F3;
     font-weight:                                                bold;
 }
-
 /*! Discord Title */
 .wordmarkWindows-2dq6rw > svg {
   width: 0;
@@ -394,7 +435,7 @@ button.footerButton-24QPis.button-f2h6uQ.lookFilled-yCfaCM.colorGrey-2iAG-B.size
 
 /*! Info */
 .info-3pQQBb:last-child::after {
-  content: "\00000a\00000a======================\00000aTheme:\00000aMonokai Pro Ristretto\00000aVersion 1.0.1\00000aby @arschedev /\00000a / arschedev#3951 \00000aBottom Text\00000a======================\00000a";
+  content: "\00000a\00000a======================\00000aTheme:\00000aMonokai Pro Ristretto\00000aVersion 1.0.2\00000aby @arschedev /\00000a / arschedev#3951 \00000aBottom Text\00000a======================\00000a";
   text-transform: none;
   white-space: pre; 
   font-size: 12px;
