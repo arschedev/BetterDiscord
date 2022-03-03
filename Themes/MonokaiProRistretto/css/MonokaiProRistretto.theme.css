@@ -4,7 +4,7 @@
  * @authorLink https://github.com/arschedev
  * @version 1.0.0
  * @description Monokai Pro Theme with Ristretto Filter (JetBrains IDE Styled)
- * @source https://github.com/arschedev/BetterDiscord/tree/master/Themes/MonokaiProRistretto
+ * @source https://github.com/arschedev/BetterDiscord/tree/main/Themes/MonokaiProRistretto
 */
 
 
@@ -394,7 +394,7 @@ button.footerButton-24QPis.button-f2h6uQ.lookFilled-yCfaCM.colorGrey-2iAG-B.size
 
 /*! Info */
 .info-3pQQBb:last-child::after {
-  content: "\00000a\00000a======================\00000aTheme:\00000aMonokai Pro Ristretto\00000aVersion 1.0.0\00000aby @arschedev /\00000a / arschedev#3951 \00000aBottom Text\00000a======================\00000a";
+  content: "\00000a\00000a======================\00000aTheme:\00000aMonokai Pro Ristretto\00000aVersion 1.0.1\00000aby @arschedev /\00000a / arschedev#3951 \00000aBottom Text\00000a======================\00000a";
   text-transform: none;
   white-space: pre; 
   font-size: 12px;
