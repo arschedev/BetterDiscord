@@ -2,12 +2,12 @@
  * @name Monokai-Pro-Ristretto
  * @author @arschedev
  * @authorLink https://github.com/arschedev
- * @version 1.0.2
+ * @version 1.0.3
  * @description Monokai Pro Theme with Ristretto Filter (JetBrains IDE Styled)
  * @source https://github.com/arschedev/BetterDiscord/tree/main/Themes/MonokaiProRistretto
 */
 
-/* Commit: MonokaiProRistretto-v1.0.2 */
+/* Commit: MonokaiProRistretto-v1.0.3 */
 
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
@@ -32,9 +32,9 @@ html, body {
     --text-muted:                                               #FFF1F3;
     --text-normal:                                              #F9CC6C;
     --text-link:                                                #85DACC;
-    --text-positive:                                            hsla(102, 50%, 38%, 1);
+    --text-positive:                                            hsla(102, 60%, 38%, 1);
     --background-message-hover:                                 #352E2E;
-    --background-mentioned:                                     #4B1515;
+    --background-mentioned:                                     rgba(75, 21, 21, .875);
     --background-mentioned-hover:                               rgba(91, 83, 83, .5);
     /*! Interface */
     --channeltextarea-background:                               #363337;
@@ -63,7 +63,7 @@ html, body {
     --brand-experiment-15a: #8988B926;
     --brand-experiment-20a: #8988B933;
     --brand-experiment-25a: #8988B940;
-    --brand-experiment-30a: #8988B94d;
+    --brand-experiment-30a: rgba(137, 136, 185, .65);
     --brand-experiment-35a: #8988B959;
     --brand-experiment-40a: #8988B966;
     --brand-experiment-45a: #8988B973;
@@ -97,6 +97,11 @@ html, body {
 
                                 /*! ---====CSS=====--- */
 
+/*! New Messages Bar */
+.newMessagesBar-1hF-9G:hover {
+    background-color:                                           hsla(241, 25%, 62%, 1);
+}
+
 /*! No Icon */ 
 .noIcon-3gSX9V {
     background-color:                                           #3B514D;
@@ -122,9 +127,12 @@ html, body {
     color:                                                      #FD6883;
 }
 
-/*! Some Text in Voice Calls etc. */
+/*! Some Text & Buttons in Voice Calls etc. */
 .flex-2S1XBF.flex-3BkGQD.horizontal-112GEH.horizontal-1Piu5-.flex-3BkGQD.directionRow-2Iu2A9.justifyStart-2Mwniq.alignCenter-14kD11.noWrap-hBpHBz {
     font-weight: bold;
+}
+button.button-1EGGcP.buttonColor-3bP3fX.button-f2h6uQ.lookFilled-yCfaCM.colorBrand-I6CyqQ.sizeSmall-wU2dO-.grow-2sR_-F.button-1EGGcP {
+    background-color:                                           hsla(247, 6%, 35%, 1);
 }
 
 /*! Header Primary Color */
@@ -143,12 +151,12 @@ html, body {
 /*! Spoilers */
 .theme-dark .spoilerText-27bIiA.hidden-3B-Rum, .theme-light .spoilerText-27bIiA.hidden-3B-Rum {
     background-color:                                           #7D7374;
-    filter: brightness(100%);
+    filter: brightness(120%);
     transition: filter var(--transition-out-medium);
 }
 .theme-dark .spoilerText-27bIiA.hidden-3B-Rum:hover, .theme-light .spoilerText-27bIiA.hidden-3B-Rum:hover {
     background-color:                                           #7D7374;
-    filter: brightness(80%);
+    filter: brightness(150%);
     transition: filter var(--transition-in);
 }
 .theme-dark .spoilerText-27bIiA, .theme-light .spoilerText-27bIiA {
@@ -205,6 +213,19 @@ html, body {
     border-bottom: 0;
 }
 
+.tabBarItem-30Te4-.item-3XjbnG.themed-2-lozF:hover {
+    border-bottom-color:                                        rgba(253, 104, 131, .5);
+}
+
+.tabBarItem-30Te4-.item-3XjbnG.themed-2-lozF:active {
+    border-bottom-color:                                        rgba(253, 104, 131, .375);
+}
+
+.selected-g-kMVV.item-3XjbnG, .selected-g-kMVV.item-3XjbnG:hover {
+    border-bottom-color:                                        rgba(253, 104, 131, 1) !important;
+    cursor: pointer;
+}
+
 /*! Search Bar */
 .resultsGroup-cfY57t { 
     background:                                                 #2B2929;
@@ -256,6 +277,9 @@ html, body {
     border-radius: 0px 360px 0px 360px;
     margin-top: 22px;
     margin-bottom: 55px;
+}
+.scroller-3X7KbA.none-2-_0dP.scrollerBase-_bVAAt > div[aria-label="Servers"] {
+    margin-top: 12px;
 }
 
 /*! Messages' Beckgrounds & Onmouseover Events */
@@ -416,6 +440,7 @@ button.footerButton-24QPis.button-f2h6uQ.lookFilled-yCfaCM.colorGrey-2iAG-B.size
     background:                                                 #FFF1F3;
     font-weight:                                                bold;
 }
+
 /*! Discord Title */
 .wordmarkWindows-2dq6rw > svg {
   width: 0;
@@ -428,14 +453,15 @@ button.footerButton-24QPis.button-f2h6uQ.lookFilled-yCfaCM.colorGrey-2iAG-B.size
   -webkit-mask-size: cover;
   background-color:                                             #FFF1F3;
   position: absolute;
-  margin-left: -5.5px;
+  margin-left: -5px;
+  margin-top: 1px;
   width: 57px !important;
   height: 14px !important;
 }
 
 /*! Info */
 .info-3pQQBb:last-child::after {
-  content: "\00000a\00000a======================\00000aTheme:\00000aMonokai Pro Ristretto\00000aVersion 1.0.2\00000aby @arschedev /\00000a / arschedev#3951 \00000aBottom Text\00000a======================\00000a";
+  content: "\00000a\00000a======================\00000aTheme:\00000aMonokai Pro Ristretto\00000aVersion 1.0.3\00000aby @arschedev /\00000a / arschedev#3951 \00000aBottom Text\00000a======================\00000a";
   text-transform: none;
   white-space: pre; 
   font-size: 12px;
