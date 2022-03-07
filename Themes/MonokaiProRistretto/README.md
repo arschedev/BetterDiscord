@@ -2,7 +2,7 @@
 # Monokai Pro Ristretto 
 ***
 
-## Preview (v1.0.4)
+## Preview
 ![PREVIEW](https://raw.githubusercontent.com/arschedev/BetterDiscord/main/Themes/MonokaiProRistretto/preview.png)
 ---
 
