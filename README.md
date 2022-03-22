@@ -5,7 +5,7 @@
 
 1.  Install BetterDiscord 
 1.  Open Discord then go in settings -> BetterDiscord -> Themes -> Open Themes Folder
-1.  Paste *[ThemeName]*.theme.css file *(https://raw.githubusercontent.com/arschedev/BetterDiscord/main/Themes/[ThemeName]/css/[ThemeName].theme.css)*
+1.  Paste *[ThemeName]*.theme.css file (*https://raw.githubusercontent.com/arschedev/BetterDiscord/main/Themes/[ThemeName]/css/[ThemeName].theme.css*)
 1.  Go back in settings -> BetterDiscord -> Themes
 1.  Enable the theme
 
