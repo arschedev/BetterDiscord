@@ -4,8 +4,8 @@
 ## ***Description***
 ***Now, some customization available***
 
-Ristretto Filtered Monokai Pro Theme
-| Initial implementation: https://plugins.jetbrains.com/plugin/13643-monokai-pro-theme  
+Ristretto Filtered Monokai Pro Theme | Initial implementation:  
+https://plugins.jetbrains.com/plugin/13643-monokai-pro-theme  
 https://monokai.pro
 
 ## ***Preview***
