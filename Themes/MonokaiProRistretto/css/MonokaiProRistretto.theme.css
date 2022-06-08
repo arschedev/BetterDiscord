@@ -2,14 +2,15 @@
  * @name Monokai Pro Ristretto
  * @author arschedev
  * @authorLink https://github.com/arschedev
- * @version 1.2.0
+ * @version 1.2.1
  * @description Ristretto Filtered Monokai Pro Theme
 | Initial implementation: https://plugins.jetbrains.com/plugin/13643-monokai-pro-theme && https://monokai.pro
  * @source https://github.com/arschedev/BetterDiscord/tree/main/Themes/MonokaiProRistretto
  * @website https://github.com/arschedev
 */
 
-/* Commit: MonokaiProRistretto-v1.2.0 */
+/* Commit: MonokaiProRistretto-v1.2.1 */
+/* some changes & fixes, more customization */
 
 
 
@@ -18,11 +19,15 @@
 .theme-dark,
 .theme-light {
 
-
+ 
     /* Theme's default: 0px, 
        Discord's default - 4px */
-    --theme-elements-borders:       0px;
-    --theme-sidebar-pills-borders:  0px;
+    --theme-elements-borders:         0px;
+    --theme-sidebar-pills-borders:    0px;
+
+    /* Theme's default: 0px, 
+       Discord's default - 8px */
+    --theme-scrollbar-thumb-borders:  0px;
 
 
 }
@@ -52,7 +57,7 @@ body {
 .theme-dark,
 .theme-light {
     /*! Theme */
-    --theme-version:                                            "1.2.0";
+    --theme-version:                                            "1.2.1";
     /*! Primary */
     --background-primary:                                       #2C2525;
     --background-secondary:                                     #211C1C;
@@ -85,13 +90,13 @@ body {
     --brand-experiment-600:                                     #3B514D99;
     --activity-card-background:                                 #211C1C;
     --textbox-markdown-syntax:                                  #869198;
-    /*! ScrollBar */
+    /*! Scroll Bar */
     --scrollbar-thin-thumb:                                     #403838;
     --scrollbar-auto-thumb:                                     #403838;
     --scrollbar-auto-scrollbar-color-thumb:                     #403838;
     --scrollbar-auto-track:                                     #2C2525;
     --scrollbar-auto-scrollbar-color-track:                     #2C2525;
-    /*! Global Buttons */
+    /*! Global buttons */
     --brand-experiment-05a: #8988B90d;
     --brand-experiment-10a: #8988B91a;
     --brand-experiment-15a: #8988B926;
@@ -110,7 +115,6 @@ body {
     --brand-experiment-85a: #8988B9d9;
     --brand-experiment-90a: #8988B9ff;
     --brand-experiment-95a: #8988B98c;
-
     --brand-experiment-30a: hsla(272, 27%, 44%, 1);
     --brand-experiment:     hsla(241, 25%, 62%, .75);
 }
@@ -141,6 +145,11 @@ body {
                             /*! ---====Styles=====--- */
 
 
+/*! Scroll Bar thumb */
+*::-webkit-scrollbar-thumb {
+    border-radius: var(--theme-scrollbar-thumb-borders) !important;
+}
+
 /*! Font fix */
 .status-3TYC5W {
     font-size: 80%;
@@ -166,7 +175,7 @@ body {
     border: 1px solid #fff !important;
 }
 
-/*! Expanded Folder Background  */
+/*! Expanded Folder background  */
 .expandedFolderBackground-1kSAf6 {
     background-color:                                           var(--background-primary);
 }
@@ -175,12 +184,12 @@ body {
     background-color:                                           var(--background-primary);
 }
 
-/*! Discover Title  */
+/*! Discover title  */
 h3.searchTitle-1qceKb.base-21yXnu.size24-17l95E {
     color:                                                      #FFF1F3
 }
 
-/*! Invite Message Box  */
+/*! Invite Message box  */
 .wrapper-1HIH0j.userSelectNone-3AtPzf.cursorDefault-2KkZ5q {
     background-color:                                           #211C1C;
 }
@@ -200,10 +209,10 @@ h3.searchTitle-1qceKb.base-21yXnu.size24-17l95E {
 }
 .textarea-_59yqs {
     background-color:                                           transparent;
-    transition: background-color var(--transition-out-short);
+    transition: background-color var(--transition-out-short) !important;
 }
 
-/*! Reaction Icons  */
+/*! Reaction icons  */
 /*RClick Menu*/
 .button-1zW0-r,
 .button-1zW0-r:hover {
@@ -213,7 +222,7 @@ h3.searchTitle-1qceKb.base-21yXnu.size24-17l95E {
 *[class*="reactionMe"] { 
     background-color:                                           #FFF1F3 !important;
     filter: brightness(75%);
-    transition: filter var(--transition-out-long) !important;
+    transition: filter var(--transition-out-short-x) !important;
 }
 *[class*="reactionMe"]:hover { 
     filter: brightness(100%);
@@ -234,12 +243,12 @@ h3.searchTitle-1qceKb.base-21yXnu.size24-17l95E {
 .mention {
     color:                                                      #FFF1F3 !important;
     filter:                                                     brightness(100%);
-    transition: filter var(--transition-out-short-x);
+    transition: filter var(--transition-out-short-x) !important;
 }
 .mention:hover {
     color:                                                      #ffffff !important;
     filter:                                                     brightness(120%);
-    transition: filter var(--transition-out-short-x);
+    transition: filter var(--transition-out-short-x) !important;
     background-color: DONTCHANGE !important;
 }
 /*Channel*/
@@ -250,21 +259,21 @@ h3.searchTitle-1qceKb.base-21yXnu.size24-17l95E {
 /*! Jump to present Bar */
 .jumpToPresentBar-1cEnH0 {
     background-color:                                           rgba(59, 81, 77, .9);
-    transition: background-color var(--transition-out-short);
+    transition: background-color var(--transition-out-short) !important;
 }
 .jumpToPresentBar-1cEnH0:hover {
     background-color:                                           rgba(59, 81, 77, 1);
-    transition: background-color var(--transition-in-medium);
+    transition: background-color var(--transition-in-medium) !important;
 }
 
 /*! New Messages Bar */
 .newMessagesBar-1hF-9G {
     background-color:                                           hsla(241, 25%, 62%, .8);
-    transition: background-color var(--transition-out-short);
+    transition: background-color var(--transition-out-short) !important;
 }
 .newMessagesBar-1hF-9G:hover {
     background-color:                                           hsla(241, 25%, 62%, 1);
-    transition: background-color var(--transition-in-medium);
+    transition: background-color var(--transition-in-medium) !important;
 }
 
 /*! No Icon */
@@ -273,7 +282,7 @@ h3.searchTitle-1qceKb.base-21yXnu.size24-17l95E {
     color:                                                      #FFF1F3;
 }
 
-/*! Drag & Drop Stuff */
+/*! Drag & Drop */
 .target-1eRTCg.dragOver-1OKbo2::before {
     background-color:                                           #8AC9FF;
 }
@@ -295,7 +304,7 @@ h3.searchTitle-1qceKb.base-21yXnu.size24-17l95E {
     color:                                                      #FD6883;
 }
 
-/*! Some Text & Buttons in Voice Calls, etc. */
+/*! Text & Buttons in Voice Calls, etc. */
 .flex-2S1XBF.flex-3BkGQD.horizontal-112GEH.horizontal-1Piu5-.flex-3BkGQD.directionRow-2Iu2A9.justifyStart-2Mwniq.alignCenter-14kD11.noWrap-hBpHBz {
     font-weight: bold;
 }
@@ -303,7 +312,7 @@ button.button-1EGGcP.buttonColor-3bP3fX.button-f2h6uQ.lookFilled-yCfaCM.colorBra
     background-color:                                           hsla(247, 6%, 35%, 1);
 }
 
-/*! Header Primary Color */
+/*! Header Primary color */
 .size24-17l95E {
     color:                                                      #3C83E6;
 }
@@ -326,35 +335,35 @@ button.button-1EGGcP.buttonColor-3bP3fX.button-f2h6uQ.lookFilled-yCfaCM.colorBra
 .theme-light .spoilerText-27bIiA.hidden-3B-Rum {
     background-color:                                           #565353;
     filter: brightness(140%);
-    transition: filter var(--transition-out-medium);
+    transition: filter var(--transition-out-medium) !important;
     border: 2px dashed #000;
     border-radius: 0;
 }
-/* Hidden Hover */
+/*Hidden :hover*/
 .theme-dark .spoilerText-27bIiA.hidden-3B-Rum:hover,
 .theme-light .spoilerText-27bIiA.hidden-3B-Rum:hover {
     background-color:                                           #565353;
     filter: brightness(175%);
-    transition: filter var(--transition-in);
+    transition: filter var(--transition-in) !important;
 }
 /*Opened */
 .theme-dark .spoilerText-27bIiA,
 .theme-light .spoilerText-27bIiA {
     background:                                                 #B8AEAF;
     color:                                                      #000000;
-    transition: background var(--transition-out-short);
+    transition: background var(--transition-out-short) !important;
     border: 2px double #000;
     border-radius: 0;
 }
-/*Opened Hover*/
+/*Opened :hover*/
 .theme-dark .spoilerText-27bIiA:hover,
 .theme-light .spoilerText-27bIiA:hover {
     background:                                                 #E0D4D5;
     color:                                                      #000000;
-    transition: background var(--transition-out-short-x);
+    transition: background var(--transition-out-short-x) !important;
 }
 
-/*! Green Buttons */
+/*! Green buttons */
 .lookFilled-yCfaCM.colorGreen-3y-Z79 {
     background-color:                                           hsla(102, 40%, 38%, 1);
 }
@@ -365,7 +374,7 @@ button.button-1EGGcP.buttonColor-3bP3fX.button-f2h6uQ.lookFilled-yCfaCM.colorBra
     background-color:                                           hsla(102, 40%, 38%, .5);
 }
 
-/*! Grey Buttons */
+/*! Grey buttons */
 .theme-dark .lookFilled-yCfaCM.colorGrey-2iAG-B,
 .theme-light .lookFilled-yCfaCM.colorGrey-2iAG-B {
     background-color:                                           rgba(119, 129, 135, 1);
@@ -379,7 +388,7 @@ button.button-1EGGcP.buttonColor-3bP3fX.button-f2h6uQ.lookFilled-yCfaCM.colorBra
     background-color:                                           rgba(119, 129, 135, .5);
 }
 
-/*! Primary Buttons */
+/*! Primary buttons */
 .theme-dark .lookFilled-yCfaCM.colorPrimary-2AuQVo,
 .theme-light .lookFilled-yCfaCM.colorPrimary-2AuQVo {
     background-color:                                           rgba(119, 129, 135, 1);
@@ -393,7 +402,7 @@ button.button-1EGGcP.buttonColor-3bP3fX.button-f2h6uQ.lookFilled-yCfaCM.colorBra
     background-color:                                           rgba(119, 129, 135, .5);
 }
 
-/*! Blue Buttons */
+/*! Blue buttons */
 .lookFilled-yCfaCM.colorBrand-I6CyqQ {
     background-color:                                           rgba(137, 136, 185, .5);
 }
@@ -404,7 +413,7 @@ button.button-1EGGcP.buttonColor-3bP3fX.button-f2h6uQ.lookFilled-yCfaCM.colorBra
     background-color:                                           rgba(137, 136, 185, .25);
 }
 
-/*! User Info Stroke */
+/*! User Info stroke */
 .tabBarContainer-sCZC4w {
     border-bottom: 0;
 }
@@ -428,12 +437,12 @@ button.button-1EGGcP.buttonColor-3bP3fX.button-f2h6uQ.lookFilled-yCfaCM.colorBra
 .searchBar-3TnChZ .searchBarComponent-3N7dCG {
     color:                                                      var(--text-link);
     filter: brightness(100%);
-    transition: filter var(--transition-out-medium);
+    transition: filter var(--transition-out-medium) !important;
 }
 .searchBar-3TnChZ .searchBarComponent-3N7dCG:hover {
     color:                                                      var(--text-link);
     filter: brightness(120%);
-    transition: filter var(--transition-in-short);
+    transition: filter var(--transition-in-short) !important;
 }
 /*Right*/
 .searchBar-jGtisZ {
@@ -442,10 +451,6 @@ button.button-1EGGcP.buttonColor-3bP3fX.button-f2h6uQ.lookFilled-yCfaCM.colorBra
 .resultsGroup-cfY57t {
     background:                                                 #2B2929;
 }
-/*.option-ayUoaq {
-    <!---OUTDATED v1.1.0 -> v1.2.0--->
-    border-radius\: 3px 0 0 3px !important;
-}*/
 .theme-dark .option-ayUoaq::after,
 .theme-light .option-ayUoaq::after {
     background:                                                 #2B2929;
@@ -500,85 +505,85 @@ button.button-1EGGcP.buttonColor-3bP3fX.button-f2h6uQ.lookFilled-yCfaCM.colorBra
     margin-top: 12px;
 }
 
-/*! Messages' Beckgrounds & :hover */
+/*! Messages' backgrounds & :hover */
 /*Default*/
 .message-2CShn3.cozyMessage-1DWF9U.groupStart-3Mlgv1.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz:not(.mentioned-Tre-dv) {
     background:                                                 var(--background-primary);
-    transition: background var(--transition-out-short-x);
+    transition: background var(--transition-out-short-x) !important;
 }
 .message-2CShn3.cozyMessage-1DWF9U.groupStart-3Mlgv1.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz:not(.mentioned-Tre-dv):hover {
     background:                                                 var(--background-message-hover);
-    transition: background var(--transition-in-short-x);
+    transition: background var(--transition-in-short-x) !important;
 }
 .message-2CShn3.cozyMessage-1DWF9U.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz:not(.mentioned-Tre-dv) {
     background:                                                 var(--background-primary);
-    transition: background var(--transition-out-short-x);
+    transition: background var(--transition-out-short-x) !important;
 }
 .message-2CShn3.cozyMessage-1DWF9U.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz:not(.mentioned-Tre-dv):hover {
     background:                                                 var(--background-message-hover);
-    transition: background var(--transition-in-short-x);
+    transition: background var(--transition-in-short-x) !important;
 }
 /*Mentioned*/
 .message-2CShn3.cozyMessage-1DWF9U.groupStart-3Mlgv1.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz.mentioned-Tre-dv {
     background:                                                 var(--background-mentioned);
-    transition: background var(--transition-out-short-x);
+    transition: background var(--transition-out-short-x) !important;
 }
                 /*Static Mention Properties*/
 .message-2CShn3.cozyMessage-1DWF9U.groupStart-3Mlgv1.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz.mentioned-Tre-dv .mention {
     color:                                                      #FFF1F3 !important;
     filter:                                                     brightness(100%);
-    transition: filter var(--transition-out-short-x);
+    transition: filter var(--transition-out-short-x) !important;
 }
 .message-2CShn3.cozyMessage-1DWF9U.groupStart-3Mlgv1.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz.mentioned-Tre-dv:hover {
     background:                                                 var(--background-mentioned-hover);
-    transition: background var(--transition-in-short-x);
+    transition: background var(--transition-in-short-x) !important;
 }
                 /*Hover Mention Properties*/
 .message-2CShn3.cozyMessage-1DWF9U.groupStart-3Mlgv1.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz.mentioned-Tre-dv:hover .mention {
     color:                                                      #ffffff;
     filter:                                                     brightness(120%);
-    transition: filter var(--transition-in-short-x);
+    transition: filter var(--transition-in-short-x) !important;
 }
 .message-2CShn3.cozyMessage-1DWF9U.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz.mentioned-Tre-dv {
     background:                                                 var(--background-mentioned);
-    transition: background var(--transition-out-short-x);
+    transition: background var(--transition-out-short-x) !important;
 }
                 /*Static Mention Properties*/
 .message-2CShn3.cozyMessage-1DWF9U.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz.mentioned-Tre-dv .mention {
     color:                                                      #FFF1F3 !important;
     filter:                                                     brightness(100%);
-    transition: filter var(--transition-out-short-x);
+    transition: filter var(--transition-out-short-x) !important;
 }
 .message-2CShn3.cozyMessage-1DWF9U.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz.mentioned-Tre-dv:hover {
     background:                                                 var(--background-mentioned-hover);
-    transition: background var(--transition-in-short-x);
+    transition: background var(--transition-in-short-x) !important;
 }
                 /*Hover Mention Properties*/
 .message-2CShn3.cozyMessage-1DWF9U.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz.mentioned-Tre-dv:hover .mention {
     color:                                                      #ffffff;
     filter:                                                     brightness(120%);
-    transition: filter var(--transition-in-short-x);
+    transition: filter var(--transition-in-short-x) !important;
 }
 
-/*! Buttons Strikethrough */
+/*! Buttons strikethrough */
 .strikethrough-2Kl6HF {
     color:                                                      var(--interative-normal);
 }
 
-/*! Interactive Buttons Stuff */
+/*! Interactive buttons */
 /*Global*/
 .expression-picker-chat-input-button.buttonContainer-2lnNiN .contents-3ca1mk.button-2fCJ0o.button-3BaQ4X {
     color:                                                      #FD6883;
-    transition: color var(--transition-out-short-x);
+    transition: color var(--transition-out-short-x) !important;
 }
 .expression-picker-chat-input-button.buttonContainer-2lnNiN:hover .contents-3ca1mk.button-2fCJ0o.button-3BaQ4X {
     color:                                                      #FFF1F3;
-    transition: color var(--transition-in-short);
+    transition: color var(--transition-in-short) !important;
 }
 .active-z80xEj .buttonWrapper-3YFQGJ,
 .buttonWrapper-3YFQGJ:hover {
     color:                                                      #FFF1F3;
-    transition: color var(--transition-in-short);
+    transition: color var(--transition-in-short) !important;
 }
 button.button-f2h6uQ.lookBlank-21BCro.colorBrand-I6CyqQ.grow-2sR_-F > div.contents-3ca1mk.button-2fCJ0o.button-3BaQ4X > div.buttonWrapper-3YFQGJ[id="children"] > svg[viewBox="0 0 24 24"]:hover {
     color:                                                      #FD6883;
@@ -607,12 +612,12 @@ button.button-f2h6uQ.lookBlank-21BCro.colorBrand-I6CyqQ.grow-2sR_-F > div.conten
 .container-YkUktl,
 .avatar-1EWyVD {
     filter: opacity(1);
-    transition: filter var(--transition-out);
+    transition: filter var(--transition-out) !important;
 }
 .avatar-1EWyVD:hover {
     opacity: 1;
     filter: opacity(.75);
-    transition: filter var(--transition-in);
+    transition: filter var(--transition-in) !important;
 }
 
 /*! Icons: Add, Explore */
@@ -639,37 +644,37 @@ button.button-f2h6uQ.lookBlank-21BCro.colorBrand-I6CyqQ.grow-2sR_-F > div.conten
     color:                                                      #000000;
 }
 
-/*! Home Button (Discord Logo) */
-/* Static */
+/*! Home button (Discord logo) */
+/*Static*/
 .wrapper-3kah-n[role="listitem"] > div.childWrapper-1j_1ub {
     color:                                                      #3C83E6;
     background-color:                                           transparent;
-    transition: color var(--transition-out);
+    transition: color var(--transition-out) !important;
 }
-/* Hover */
+/*Hover*/
 .wrapper-3kah-n[role="listitem"] > div.childWrapper-1j_1ub:hover {
     color:                                                      var(--background-modifier-accent);
     background-color:                                           transparent;
-    transition: color var(--transition-in);
+    transition: color var(--transition-in) !important;
 }
-/* Selected */
+/*Selected*/
 .wrapper-3kah-n.selected-1Drb7Z[role="listitem"] > div.childWrapper-1j_1ub {
     color:                                                      var(--background-modifier-accent);
     background-color:                                           transparent;
-    transition: color var(--transition-in);
+    transition: color var(--transition-in) !important;
 }
 
-/*! Sidebar Icons */
+/*! Sidebar icons */
 .wrapper-3kah-n.selected-1Drb7Z .childWrapper-1j_1ub,
 .wrapper-3kah-n:hover .childWrapper-1j_1ub {
     color:                                                      #FFF1F3;
     background-color:                                           #7575a3;
-    transition: background-color var(--transition-in);
+    transition: background-color var(--transition-in) !important;
 }
 .childWrapper-1j_1ub.acronym-2zrAHN {
     color:                                                      #FFF1F3;
     background:                                                 #8988B9cc;
-    transition: background-color var(--transition-out-short);
+    transition: background-color var(--transition-out-short) !important;
 }
 .childWrapper-1j_1ub.button-Jt-tIg {
     font-size: 9px;
@@ -684,7 +689,7 @@ button.button-f2h6uQ.lookBlank-21BCro.colorBrand-I6CyqQ.grow-2sR_-F > div.conten
     font-weight:                                                bold;
 }
 
-/*! Discord Title */
+/*! Discord title */
 .wordmarkWindows-2dq6rw > svg {
   width: 0;
 }
@@ -704,7 +709,7 @@ button.button-f2h6uQ.lookBlank-21BCro.colorBrand-I6CyqQ.grow-2sR_-F > div.conten
 
 /*! Info */
 .info-3pQQBb:last-child::after {
-  content: "\00000a\00000a======================\00000aTheme:\00000aMonokai Pro Ristretto\00000aVersion " var(--theme-version) "\00000aby @arschedev /\00000a / arschedev#3951 \00000aBottom Text\00000a======================\00000a";
+  content: "\00000a\00000a======================\00000aTheme:\00000aMonokai Pro Ristretto\00000aVersion " var(--theme-version) "\00000aby @arschedev /\00000a/ arschedev#3951 \00000aJetBrains Mono <3\00000a======================\00000a";
   text-transform: none;
   white-space: pre;
   font-size: 12px;
@@ -714,9 +719,10 @@ button.button-f2h6uQ.lookBlank-21BCro.colorBrand-I6CyqQ.grow-2sR_-F > div.conten
 }
 
 .info-3pQQBb:last-child {
-    background-position: 0% 129%;
+    background-position: 0% 137%;
     background-repeat: no-repeat;
     background-image: url('/assets/ac4bcb496ca349a21b05e400bd8ac5dc.svg');
+    filter: brightness(120%) grayscale(.5);
 }
 
 /*! End !*/
@@ -865,8 +871,9 @@ button.button-f2h6uQ.lookBlank-21BCro.colorBrand-I6CyqQ.grow-2sR_-F > div.conten
 
                             /*! --===Customization===-- */
 
-/*! Button Borders */
-/* 4px is default */
+/*! Button borders */
+*[class*="root"],
+.controlButton-2PMNom.green-3wkLbx,
 .tooltip-14MtrL,
 .contentWrapper-3vHNP2,
 .userPopout-2j1gM4,
@@ -882,7 +889,9 @@ input[type="search"],
 input[type="submit"] {
     border-radius: var(--theme-elements-borders) !important;
 }
-
+.controlButton-2PMNom.centerButton-1IShs7:not([class*="red"], [class*="green"]) {
+    border-radius: 50% !important;
+}
 
                             /*! --===Smoothness===-- */
 
