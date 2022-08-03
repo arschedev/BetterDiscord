@@ -2,15 +2,14 @@
  * @name Monokai Pro Ristretto
  * @author arschedev
  * @authorLink https://github.com/arschedev
- * @version 1.2.1
+ * @version 1.2.1.1
  * @description Ristretto Filtered Monokai Pro Theme
-| Initial implementation: https://plugins.jetbrains.com/plugin/13643-monokai-pro-theme && https://monokai.pro
+| Reference: https://plugins.jetbrains.com/plugin/13643-monokai-pro-theme \\\ https://monokai.pro
  * @source https://github.com/arschedev/BetterDiscord/tree/main/Themes/MonokaiProRistretto
- * @website https://github.com/arschedev
+ * @website https://arschedev.github.io
 */
 
-/* Commit: MonokaiProRistretto-v1.2.1 */
-/* some changes & fixes, more customization */
+/* MonokaiProRistretto-v1.2.1.1 */
 
 
 
@@ -57,7 +56,7 @@ body {
 .theme-dark,
 .theme-light {
     /*! Theme */
-    --theme-version:                                            "1.2.1";
+    --theme-version:                                            "1.2.1.1";
     /*! Primary */
     --background-primary:                                       #2C2525;
     --background-secondary:                                     #211C1C;
@@ -144,7 +143,6 @@ body {
 
                             /*! ---====Styles=====--- */
 
-
 /*! Scroll Bar thumb */
 *::-webkit-scrollbar-thumb {
     border-radius: var(--theme-scrollbar-thumb-borders) !important;
@@ -165,11 +163,11 @@ body {
  }
 
 /*! Code  */
-/*Single */
+/*Single*/
 .markup-eYLPri code {
     background-color:                                           #19181A;
 }
-/*Multiple */
+/*Multiple*/
 .hljs {
     background-color:                                           #333333 !important;
     border: 1px solid #fff !important;
@@ -249,7 +247,6 @@ h3.searchTitle-1qceKb.base-21yXnu.size24-17l95E {
     color:                                                      #ffffff !important;
     filter:                                                     brightness(120%);
     transition: filter var(--transition-out-short-x) !important;
-    background-color: DONTCHANGE !important;
 }
 /*Channel*/
 .iconMention-3WxjBe.iconMentionText-1_WCtN.mention {
@@ -330,7 +327,7 @@ button.button-1EGGcP.buttonColor-3bP3fX.button-f2h6uQ.lookFilled-yCfaCM.colorBra
 }
 
 /*! Spoilers */
-/*Hidden */
+/*Hidden*/
 .theme-dark .spoilerText-27bIiA.hidden-3B-Rum,
 .theme-light .spoilerText-27bIiA.hidden-3B-Rum {
     background-color:                                           #565353;
@@ -346,7 +343,7 @@ button.button-1EGGcP.buttonColor-3bP3fX.button-f2h6uQ.lookFilled-yCfaCM.colorBra
     filter: brightness(175%);
     transition: filter var(--transition-in) !important;
 }
-/*Opened */
+/*Opened*/
 .theme-dark .spoilerText-27bIiA,
 .theme-light .spoilerText-27bIiA {
     background:                                                 #B8AEAF;
@@ -454,9 +451,8 @@ button.button-1EGGcP.buttonColor-3bP3fX.button-f2h6uQ.lookFilled-yCfaCM.colorBra
 .theme-dark .option-ayUoaq::after,
 .theme-light .option-ayUoaq::after {
     background:                                                 #2B2929;
-    background-color:                                           #2B2929;
-    background-position-x: 0%;
-    background-position-y: 0%;
+    background-position-x: 0;
+    background-position-y: 0;
     background-repeat: repeat;
     background-attachment: scroll;
     background-image: none;
@@ -475,8 +471,8 @@ button.button-1EGGcP.buttonColor-3bP3fX.button-f2h6uQ.lookFilled-yCfaCM.colorBra
 .theme-light .option-ayUoaq:hover {
     background:                                                 var(--brand-experiment-560);
     background-color:                                           var(--brand-experiment-560);
-    background-position-x: 0%;
-    background-position-y: 0%;
+    background-position-x: 0;
+    background-position-y: 0;
     background-repeat: repeat;
     background-attachment: scroll;
     background-image: none;
@@ -497,7 +493,7 @@ button.button-1EGGcP.buttonColor-3bP3fX.button-f2h6uQ.lookFilled-yCfaCM.colorBra
 .scroller-3X7KbA.none-2-_0dP.scrollerBase-_bVAAt {
     padding-bottom: 42px;
     border: 1px solid transparent;
-    border-radius: 0px 360px 0px 360px;
+    border-radius: 0 360px 0 360px;
     margin-top: 22px;
     margin-bottom: 55px;
 }
@@ -567,7 +563,7 @@ button.button-1EGGcP.buttonColor-3bP3fX.button-f2h6uQ.lookFilled-yCfaCM.colorBra
 
 /*! Buttons strikethrough */
 .strikethrough-2Kl6HF {
-    color:                                                      var(--interative-normal);
+    color:                                                      var(--interactive-normal);
 }
 
 /*! Interactive buttons */
@@ -683,7 +679,7 @@ button.button-f2h6uQ.lookBlank-21BCro.colorBrand-I6CyqQ.grow-2sR_-F > div.conten
     font-weight:                                                initial;
 }
 .childWrapper-1j_1ub.button-Jt-tIg:hover {
-    font-size: 8.9px;
+    font-size: 9px;
     color:                                                      #FD6883;
     background:                                                 #FFF1F3;
     font-weight:                                                bold;
@@ -709,7 +705,7 @@ button.button-f2h6uQ.lookBlank-21BCro.colorBrand-I6CyqQ.grow-2sR_-F > div.conten
 
 /*! Info */
 .info-3pQQBb:last-child::after {
-  content: "\00000a\00000a======================\00000aTheme:\00000aMonokai Pro Ristretto\00000aVersion " var(--theme-version) "\00000aby @arschedev /\00000a/ arschedev#3951 \00000aJetBrains Mono <3\00000a======================\00000a";
+  content: "\00000a\00000a======================\00000aTheme:\00000aMonokai Pro Ristretto\00000aVersion " var(--theme-version) "\00000aby @arschedev /\00000a/ arschedev#3951 \00000aSomething\00000a======================\00000a";
   text-transform: none;
   white-space: pre;
   font-size: 12px;
@@ -719,7 +715,7 @@ button.button-f2h6uQ.lookBlank-21BCro.colorBrand-I6CyqQ.grow-2sR_-F > div.conten
 }
 
 .info-3pQQBb:last-child {
-    background-position: 0% 137%;
+    background-position: 0 137%;
     background-repeat: no-repeat;
     background-image: url('/assets/ac4bcb496ca349a21b05e400bd8ac5dc.svg');
     filter: brightness(120%) grayscale(.5);
@@ -893,13 +889,12 @@ input[type="submit"] {
     border-radius: 50% !important;
 }
 
+
                             /*! --===Smoothness===-- */
 
 *:not(.option-ayUoaq), *:not(.option-ayUoaq)::after, *:not(.option-ayUoaq)::before {
-    background-color: DONTCHANGE;
     transition: background-color var(--transition-out-short-xx);
 }
-*:not(.option-ayUoaq):hover, *:not(.option-ayUoaq):hover::after, *:not(.option-ayUoaq):hover::after {      
-    background-color: DONTCHANGE;
+*:not(.option-ayUoaq):hover, *:not(.option-ayUoaq):hover::after, *:not(.option-ayUoaq):hover::after {
     transition: background-color var(--transition-in-short-xx);
 }
