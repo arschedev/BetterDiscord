@@ -1,4 +1,3 @@
-⠀
 # Monokai Pro Ristretto
 
 ## ***Description***
